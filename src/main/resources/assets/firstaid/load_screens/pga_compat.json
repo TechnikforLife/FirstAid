@@ -1,0 +1,8 @@
+{
+	"screens" : [{
+			"COMMENT" : "Public Gui Announcement support", 
+			"class" : "ichttt.mods.firstaid.client.gui.GuiHealthScreen", 
+			"texture" : "firstaid:textures/gui/show_wounds.png", 
+			"size" : [255, 137]
+		}]
+}
