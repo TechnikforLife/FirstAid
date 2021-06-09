@@ -246,10 +246,12 @@ public class PlayerDamageModel extends AbstractPlayerDamageModel {
                 AbstractDamageablePart minimal = null;
                 float lowest = Float.MAX_VALUE;
                 for (AbstractDamageablePart part : this) {
-                    float partMaxHealth = part.currentHealth;
-                    if (partMaxHealth < lowest) {
-                        minimal = part;
-                        lowest = partMaxHealth;
+                    if (part.canCauseDeath) {
+                        float partCurrentHealth = part.currentHealth;
+                        if (partCurrentHealth < lowest) {
+                            minimal = part;
+                            lowest = partCurrentHealth;
+                        }
                     }
                 }
                 Objects.requireNonNull(minimal);
